@@ -1,0 +1,39 @@
+html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+/*global $ */
+/*jslint browser:true */
+
+$(window).load(function () {
+
+    $.ajax({
+        url: "API.php?schedule=",
+        type: "POST",
+        dataType : "json",
+        success: function (response) {
+            var trHTML = "";
+            $.each(response, function (item) {
+                trHTML += "<tr><td>"+item.eventName+"</td><td>"+item.eventType+"</td><td>"+item.eventStart+"</td><td>"+"</td><td>"+item.eventEND+"</td><td>"+item.eventLocation+"</td><td>"+item.eventPanalyst+"</td><td>"+item.eventDescrip$
+            });
+            $("#records_table").append(trHTML);
+        }
+    });
+});
+</script>
+</head>
+<body>
+<table id="records_table" border='1'>
+    <tr>
+        <th>Event Name</th>
+        <th>Event Type</th>
+        <th>Event Start</th>
+        <th>Event End</th>
+        <th>Event Location</th>
+        <th>Event Panalyst</th>
+        <th>Event Description</th>
+        <th>Event Status</th>
+    </tr>
+</table>
+</body>
+</html>
