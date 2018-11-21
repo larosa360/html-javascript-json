@@ -14,7 +14,7 @@ $(window).load(function () {
         success: function (response) {
             var trHTML = "";
             $.each(response, function (item) {
-                trHTML += "<tr><td>"+item.eventName+"</td><td>"+item.eventType+"</td><td>"+item.eventStart+"</td><td>"+"</td><td>"+item.eventEND+"</td><td>"+item.eventLocation+"</td><td>"+item.eventPanalyst+"</td><td>"+item.eventDescrip$
+                trHTML += "<tr><td>"+item.eventName+"</td><td>"+item.eventType+"</td><td>"+item.eventStart+"</td><td>"+"</td><td>"+item.eventEND+"</td><td>"+item.eventLocation+"</td><td>"+item.eventPanalyst+"</td><td>"+item.eventDescription+"</td><td>"+item.eventStatus+"</td><td>"+item.UID+"</td></tr>";
             });
             $("#records_table").append(trHTML);
         }
